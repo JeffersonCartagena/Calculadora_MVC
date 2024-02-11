@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>controlador.myServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/myServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/bdcalcul?autoReconnect=true&amp;useSSL=false&amp;useTimezone=true&amp;serverTimezone=UTC </param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUSERName</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>0906</param-value>
+    </context-param>
+    
+</web-app>
